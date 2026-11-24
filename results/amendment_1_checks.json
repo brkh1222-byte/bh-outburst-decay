@@ -1,0 +1,66 @@
+{
+ "A": {
+  "N_sources": 13,
+  "N_outbursts": 26,
+  "B_lo95": -0.1693127799471651,
+  "B_median": 0.16876703014793543,
+  "B_hi95": 0.5206292976039578,
+  "P_B_gt_0": 0.8531770833333333,
+  "P_B_ge_2_3": 0.005510416666666667,
+  "label": "as run (both clarifications)",
+  "added_vs_A": [],
+  "removed_vs_A": []
+ },
+ "B": {
+  "N_sources": 13,
+  "N_outbursts": 28,
+  "B_lo95": -0.1586000022971113,
+  "B_median": 0.17672083637973635,
+  "B_hi95": 0.5187133450528941,
+  "P_B_gt_0": 0.862859375,
+  "P_B_ge_2_3": 0.00515625,
+  "label": "clarification 1 undone (+-20 d peak matching)",
+  "added_vs_A": [
+   "GX 339-4 MJD 59358.0 (Saraswati et al. 2025)",
+   "MAXI J1820+070 MJD 58191.0 (Saraswati et al. 2025)"
+  ],
+  "removed_vs_A": []
+ },
+ "C": {
+  "N_sources": 13,
+  "N_outbursts": 28,
+  "B_lo95": -0.17553510644566203,
+  "B_median": 0.14716260422985167,
+  "B_hi95": 0.48485160507507197,
+  "P_B_gt_0": 0.8277135416666667,
+  "P_B_ge_2_3": 0.002895833333333333,
+  "label": "clarification 2 undone (literature flux cut only)",
+  "added_vs_A": [
+   "GX 339-4 MJD 56550.0 (Saraswati et al. 2025)",
+   "GX 339-4 MJD 58106.0 (Saraswati et al. 2025)"
+  ],
+  "removed_vs_A": []
+ },
+ "D": {
+  "N_sources": 13,
+  "N_outbursts": 30,
+  "B_lo95": -0.17711196654024622,
+  "B_median": 0.14900566982736352,
+  "B_hi95": 0.48671403573565575,
+  "P_B_gt_0": 0.8293541666666666,
+  "P_B_ge_2_3": 0.003411458333333333,
+  "label": "both undone",
+  "added_vs_A": [
+   "GX 339-4 MJD 56550.0 (Saraswati et al. 2025)",
+   "GX 339-4 MJD 58106.0 (Saraswati et al. 2025)",
+   "GX 339-4 MJD 59358.0 (Saraswati et al. 2025)",
+   "MAXI J1820+070 MJD 58191.0 (Saraswati et al. 2025)"
+  ],
+  "removed_vs_A": []
+ },
+ "reference_h1_results_B": [
+  -0.1693127799471651,
+  0.16876703014793543,
+  0.5206292976039578
+ ]
+}
