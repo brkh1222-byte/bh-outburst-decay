@@ -1,0 +1,397 @@
+{
+ "cat_windows": {
+  "value": 55,
+  "source": "outburst_table.csv"
+ },
+ "cat_sources": {
+  "value": 17,
+  "source": "outburst_table.csv"
+ },
+ "cat_flagged": {
+  "value": 16,
+  "source": "outburst_table.csv"
+ },
+ "cat_flagged_J1631": {
+  "value": 13,
+  "source": "outburst_table.csv"
+ },
+ "cat_unflagged": {
+  "value": 39,
+  "source": "outburst_table.csv"
+ },
+ "cat_bright_main": {
+  "value": 24,
+  "source": "outburst_table.csv"
+ },
+ "cat_bright_main_sources": {
+  "value": 13,
+  "source": "outburst_table.csv"
+ },
+ "cat_taud_min": {
+  "value": 15.2795,
+  "source": "outburst_table.csv"
+ },
+ "cat_taud_max": {
+  "value": 85.8553,
+  "source": "outburst_table.csv"
+ },
+ "cat_taud_median": {
+  "value": 30.5664,
+  "source": "outburst_table.csv"
+ },
+ "cat_bat_ratio_n": {
+  "value": 18,
+  "source": "outburst_table.csv"
+ },
+ "cat_bat_ratio_median": {
+  "value": 0.6099,
+  "source": "outburst_table.csv"
+ },
+ "cat_bat_ratio_log10": {
+  "value": -0.2148,
+  "source": "outburst_table.csv"
+ },
+ "cat_measured_outside_mc_range": {
+  "value": 6,
+  "source": "outburst_table.csv"
+ },
+ "shape_min": {
+  "value": 0.1057,
+  "source": "outburst_table.csv"
+ },
+ "shape_max": {
+  "value": 13.0231,
+  "source": "outburst_table.csv"
+ },
+ "shape_median": {
+  "value": 1.597,
+  "source": "outburst_table.csv"
+ },
+ "shape_n_gt2": {
+  "value": 10,
+  "source": "outburst_table.csv"
+ },
+ "shape_n_lt1": {
+  "value": 10,
+  "source": "outburst_table.csv"
+ },
+ "shape_n_valid": {
+  "value": 24,
+  "source": "outburst_table.csv"
+ },
+ "sample_rows": {
+  "value": 27,
+  "source": "data/sample.csv"
+ },
+ "sample_with_maxi_id": {
+  "value": 24,
+  "source": "data/sample.csv"
+ },
+ "sources_with_window_all_eras": {
+  "value": 19,
+  "source": "timescales_maxi.csv"
+ },
+ "lit_rows[Saraswati et al. 2025]": {
+  "value": 33,
+  "source": "data/literature_timescales.csv"
+ },
+ "lit_rows[Yan & Yu 2015]": {
+  "value": 42,
+  "source": "data/literature_timescales.csv"
+ },
+ "lit_duplicate_groups": {
+  "value": 9,
+  "source": "data/literature_timescales.csv"
+ },
+ "h1_outbursts": {
+  "value": 26,
+  "source": "h1_outbursts_primary.csv"
+ },
+ "h1_systems": {
+  "value": 13,
+  "source": "h1_sources_primary.csv"
+ },
+ "h1_outbursts_this_work": {
+  "value": 13,
+  "source": "h1_outbursts_primary.csv"
+ },
+ "h1_porb_min_d": {
+  "value": 0.1004,
+  "source": "h1_sources_primary.csv"
+ },
+ "h1_porb_max_d": {
+  "value": 2.6217,
+  "source": "h1_sources_primary.csv"
+ },
+ "h1_porb_range_dex": {
+  "value": 1.4168,
+  "source": "h1_sources_primary.csv"
+ },
+ "h1_slope_third_times_range_dex": {
+  "value": 0.4723,
+  "source": "h1_sources_primary.csv"
+ },
+ "h1_system_means_span_dex": {
+  "value": 0.7564,
+  "source": "h1_sources_primary.csv"
+ },
+ "table1[MAXI J1659-152]": {
+  "value": "P=0.1004 d, n=1, <tau>=14.2 d, candidate, this work",
+  "source": "h1_sources_primary.csv"
+ },
+ "table1[Swift J1753.5-0127]": {
+  "value": "P=0.1358 d, n=1, <tau>=28.5 d, dynamical, Yan & Yu 2015",
+  "source": "h1_sources_primary.csv"
+ },
+ "table1[XTE J1859+226]": {
+  "value": "P=0.2742 d, n=1, <tau>=17.2 d, dynamical, Yan & Yu 2015",
+  "source": "h1_sources_primary.csv"
+ },
+ "table1[GRS 1716-249]": {
+  "value": "P=0.2780 d, n=1, <tau>=75.0 d, dynamical, this work",
+  "source": "h1_sources_primary.csv"
+ },
+ "table1[MAXI J1803-298]": {
+  "value": "P=0.2925 d, n=1, <tau>=15.6 d, candidate, this work",
+  "source": "h1_sources_primary.csv"
+ },
+ "table1[XTE J1650-500]": {
+  "value": "P=0.3179 d, n=1, <tau>=29.1 d, dynamical, Yan & Yu 2015",
+  "source": "h1_sources_primary.csv"
+ },
+ "table1[Swift J1727.8-1613]": {
+  "value": "P=0.4502 d, n=1, <tau>=35.3 d, dynamical, this work",
+  "source": "h1_sources_primary.csv"
+ },
+ "table1[MAXI J1820+070]": {
+  "value": "P=0.6855 d, n=1, <tau>=35.8 d, dynamical, this work",
+  "source": "h1_sources_primary.csv"
+ },
+ "table1[4U 1543-47]": {
+  "value": "P=1.1164 d, n=2, <tau>=22.9 d, dynamical, Yan & Yu 2015, this work",
+  "source": "h1_sources_primary.csv"
+ },
+ "table1[XTE J1550-564]": {
+  "value": "P=1.5417 d, n=3, <tau>=15.4 d, dynamical, Saraswati et al. 2025, Saraswati et al. 2025 + Yan & Yu 2015",
+  "source": "h1_sources_primary.csv"
+ },
+ "table1[GX 339-4]": {
+  "value": "P=1.7588 d, n=10, <tau>=49.2 d, dynamical, Saraswati et al. 2025 + Yan & Yu 2015, this work",
+  "source": "h1_sources_primary.csv"
+ },
+ "table1[GS 1354-64]": {
+  "value": "P=2.5445 d, n=1, <tau>=26.3 d, dynamical, this work",
+  "source": "h1_sources_primary.csv"
+ },
+ "table1[GRO J1655-40]": {
+  "value": "P=2.6217 d, n=2, <tau>=81.1 d, dynamical, Saraswati et al. 2025 + Yan & Yu 2015",
+  "source": "h1_sources_primary.csv"
+ },
+ "gx339_n": {
+  "value": 10,
+  "source": "h1_outbursts_primary.csv"
+ },
+ "gx339_tau_min": {
+  "value": 19.4189,
+  "source": "h1_outbursts_primary.csv"
+ },
+ "gx339_tau_max": {
+  "value": 123.5081,
+  "source": "h1_outbursts_primary.csv"
+ },
+ "gx339_range_dex": {
+  "value": 0.8035,
+  "source": "h1_outbursts_primary.csv"
+ },
+ "gx339_factor": {
+  "value": 6.3602,
+  "source": "h1_outbursts_primary.csv"
+ },
+ "systems_with_one_outburst": {
+  "value": 9,
+  "source": "h1_sources_primary.csv"
+ },
+ "systems_with_multiple_outbursts": {
+  "value": 4,
+  "source": "h1_sources_primary.csv"
+ },
+ "within_system_comparisons_total": {
+  "value": 13,
+  "source": "h1_sources_primary.csv"
+ },
+ "within_system_comparisons_gx339": {
+  "value": 9,
+  "source": "h1_sources_primary.csv"
+ },
+ "h1_A_2.5_50_97.5": {
+  "value": [
+   1.341,
+   1.518,
+   1.69
+  ],
+  "source": "h1_results.json"
+ },
+ "h1_B_2.5_50_97.5": {
+  "value": [
+   -0.169,
+   0.169,
+   0.521
+  ],
+  "source": "h1_results.json"
+ },
+ "h1_log10_sigma_int_2.5_50_97.5": {
+  "value": [
+   -0.813,
+   -0.621,
+   -0.384
+  ],
+  "source": "h1_results.json"
+ },
+ "h1_sigma_int_dex_2.5_50_97.5": {
+  "value": [
+   0.154,
+   0.239,
+   0.413
+  ],
+  "source": "h1_results.json"
+ },
+ "h1_tau_at_1d": {
+  "value": 32.9371,
+  "source": "h1_results.json"
+ },
+ "h1_M0_tau_d": {
+  "value": 30.1941,
+  "source": "h1_results.json"
+ },
+ "h1_M2_break_porb_d": {
+  "value": 0.1995,
+  "source": "h1_results.json"
+ },
+ "power": {
+  "value": {
+   "sigma_int_literature_M0_dex": 0.23004660690052414,
+   "power_B0.5": 0.84,
+   "power_B0.3": 0.39
+  },
+  "source": "h1_results.json"
+ },
+ "kendall": {
+  "value": {
+   "tau": 0.30769230769230765,
+   "p_perm": 0.1643835616438356
+  },
+  "source": "h1_results.json"
+ },
+ "model_M0": {
+  "value": {
+   "AIC": 4.26,
+   "BIC": 5.39,
+   "LOSO_lpd": -2.36
+  },
+  "source": "h1_results.json"
+ },
+ "model_M1": {
+  "value": {
+   "AIC": 4.91,
+   "BIC": 6.61,
+   "LOSO_lpd": -5.67
+  },
+  "source": "h1_results.json"
+ },
+ "model_M2": {
+  "value": {
+   "AIC": 5.6,
+   "BIC": 7.86,
+   "LOSO_lpd": -6.97
+  },
+  "source": "h1_results.json"
+ },
+ "h2_B": {
+  "value": [
+   -0.344,
+   0.343,
+   1.06
+  ],
+  "source": "h1_results.json"
+ },
+ "h2_kendall": {
+  "value": {
+   "tau": 0.4242424242424242,
+   "p_perm": 0.06129387061293871
+  },
+  "source": "h1_results.json"
+ },
+ "h2_N_sources": {
+  "value": 12,
+  "source": "h1_results.json"
+ },
+ "robust[primary]": {
+  "value": "13/26 B=0.17 (-0.17, 0.52) tauK=0.31 p=0.15",
+  "source": "h1_robustness.csv"
+ },
+ "robust[+ re-flares]": {
+  "value": "13/27 B=0.17 (-0.18, 0.51) tauK=0.28 p=0.19",
+  "source": "h1_robustness.csv"
+ },
+ "robust[+ faint outbursts]": {
+  "value": "15/42 B=-0.05 (-0.42, 0.31) tauK=-0.05 p=0.85",
+  "source": "h1_robustness.csv"
+ },
+ "robust[raw MAXI (no baseline subtraction)]": {
+  "value": "13/26 B=0.14 (-0.18, 0.47) tauK=0.28 p=0.19",
+  "source": "h1_robustness.csv"
+ },
+ "robust[smoothed crossings]": {
+  "value": "13/25 B=0.13 (-0.19, 0.45) tauK=0.26 p=0.24",
+  "source": "h1_robustness.csv"
+ },
+ "robust[sigma_method = 0]": {
+  "value": "13/26 B=0.18 (-0.16, 0.50) tauK=0.31 p=0.15",
+  "source": "h1_robustness.csv"
+ },
+ "robust[sigma_method = 0.3]": {
+  "value": "13/26 B=0.17 (-0.19, 0.52) tauK=0.31 p=0.15",
+  "source": "h1_robustness.csv"
+ },
+ "robust[dynamical BHs only]": {
+  "value": "11/24 B=0.00 (-0.38, 0.43) tauK=0.16 p=0.54",
+  "source": "h1_robustness.csv"
+ },
+ "robust[this work only (2016-2026 + MAXI era)]": {
+  "value": "8/13 B=0.19 (-0.29, 0.70) tauK=0.21 p=0.55",
+  "source": "h1_robustness.csv"
+ },
+ "robust[literature only]": {
+  "value": "7/13 B=0.24 (-0.53, 0.94) tauK=0.33 p=0.38",
+  "source": "h1_robustness.csv"
+ },
+ "loo_B_median_min": {
+  "value": "0.059 (without MAXI J1659-152)",
+  "source": "h1_extra.json"
+ },
+ "loo_B_median_max": {
+  "value": "0.247 (without GRS 1716-249)",
+  "source": "h1_extra.json"
+ },
+ "loo_B_upper_min_max": {
+  "value": [
+   0.443,
+   0.607
+  ],
+  "source": "h1_extra.json"
+ },
+ "loo_n_upper_below_2_3": {
+  "value": 13,
+  "source": "h1_extra.json"
+ },
+ "P_B_gt": {
+  "value": {
+   "0.0": 0.853,
+   "0.333": 0.16,
+   "0.5": 0.031,
+   "0.667": 0.006,
+   "0.833": 0.001
+  },
+  "source": "h1_extra.json"
+ }
+}
