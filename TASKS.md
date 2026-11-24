@@ -35,6 +35,6 @@ Background, verified references and the reasoning behind each task: Claude Doc "
 
 ## Phase 5: Write-up
 - [x] **T5.1** *(bullets in paper/notes.md)* Write `paper/notes.md` with bullet results.
-- [x] **T5.2** *(22 Nov 2026; Berkh chose a full AI-assisted draft instead of writing it personally)* Draft manuscript `paper/main.tex` + `paper/references.bib` (MNRAS), figures from `src/paper_figures.py` → `paper/figures/`. AI use is disclosed in the Acknowledgements.
-- [ ] **T5.3** Berkh: read every section, check each number against `results/`, open each cited paper, fill in surname/affiliation/repository URL, compile on Overleaf (mnras template).
+- [x] **T5.2** *(22 Nov 2026; policy from 25 Nov 2026: Claude drafts, the researcher edits later; authorship and the AI-use statement are placeholders until the researcher decides)* Draft manuscript `paper/main.tex` + `paper/references.bib` (MNRAS), figures from `src/paper_figures.py` → `paper/figures/`. AI use is disclosed in the Acknowledgements.
+- [ ] **T5.3** Researcher: read and edit every section, decide authorship and the AI-use statement (placeholders `[AUTHORS — TBD]`, `[AI-USE STATEMENT — TBD]`), spot-check numbers against the audit table in `paper/notes.md`, compile on Overleaf (mnras template).
 - [ ] **T5.4** Before submission: T1.1 ADS novelty search, T3.8 commit + tag the plan, verify the five literature periods in `data/literature_porb.csv` against the original papers.
