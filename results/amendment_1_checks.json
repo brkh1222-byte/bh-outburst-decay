@@ -62,5 +62,14 @@
   -0.1693127799471651,
   0.16876703014793543,
   0.5206292976039578
- ]
+ ],
+ "porb_1650_corrected": {
+  "label": "primary sample with XTE J1650-500 period 0.3205 d (Orosz et al. 2004) instead of 7.63 h",
+  "N_sources": 13,
+  "N_outbursts": 26,
+  "B_lo95": -0.1614929353948534,
+  "B_median": 0.17127283275960875,
+  "B_hi95": 0.5060308309953969,
+  "note": "computed 2026-11-25 by an inline script from results/h1_outbursts_primary.csv; see notes/porb_check.md"
+ }
 }
