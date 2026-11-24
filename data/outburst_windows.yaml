@@ -1,0 +1,38 @@
+# Manual decisions on top of the automatic outburst windows (src/outbursts.py).
+# Every entry gives its reason. Peaks are matched within +-5 d of the measured peak MJD.
+#
+# Keys:
+#   keep_between: [lo, hi]      keep only windows whose peak lies in this MJD range
+#   drop_peaks: [mjd, ...]      remove these windows (spurious)
+#   flag_all: "reason"          keep but flag every window of this source (excluded from analysis)
+#   flag_peaks: {mjd: reason}   keep but flag these windows (excluded from analysis)
+#   drop_all: "reason"          remove the source from the MAXI measurement
+#
+# Decisions made from results/overview/*.png on 2026-11-22 (review them yourself).
+
+Swift J1727.8-1613:
+  keep_between: [60100, 60500]
+  reason: "Only the 2023-24 outburst is real (BAT confirms); earlier windows are noise in a noisy MAXI file."
+
+MAXI J1631-479:
+  flag_all: "confusion: MAXI light curve dominated by 4U 1630-47, 0.6 deg away (identical outburst history)"
+
+4U 1630-47:
+  flag_peaks:
+    58490: "confusion: MAXI J1631-479 in outburst at the same time, 0.6 deg away"
+
+GS 1354-64:
+  flag_peaks:
+    58537: "confusion: MAXI J1348-630 (1.8 deg) peaked at MJD 58523.5; BAT shows no GS 1354-64 outburst"
+    58560: "confusion: tail of the MAXI J1348-630 window above (re-flare split off by the detection); added 2026-11-22 after referee check"
+
+Swift J1753.5-0127:
+  drop_all: "Only the end of the 2005-2017 long outburst is in MAXI; no 2023-24 outburst visible in MAXI or BAT"
+
+MAXI J1727-203:
+  drop_peaks: [60186]
+  reason: "60186: short spike, not an outburst"
+
+MAXI J1810-222:
+  drop_peaks: [61307]
+  reason: "61307: short flare (tau < 1 d), likely artefact or another source; the real 2018-21 outburst is fainter than 0.05 Crab"

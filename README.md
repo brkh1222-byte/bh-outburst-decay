@@ -10,7 +10,7 @@ Outburst sample and system parameters → MAXI + Swift/BAT light curves → rise
 
 ## Status
 
-🟡 Proposal stage (Nov 2026)
+🟢 Pipeline built, validated and first H1 result in (22 Nov 2026) — see paper/notes.md and results/method_check.md
 
 ## Data credit
 

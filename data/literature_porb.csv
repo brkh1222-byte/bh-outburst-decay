@@ -1,0 +1,9 @@
+source,porb_h,porb_ref,bh_status,note
+XTE J1118+480,4.07,"Saraswati et al. 2025 Table 1 (their refs: Gelino et al. 2006; Gonzalez Hernandez et al. 2008, 2014; Khargharia et al. 2013)",dynamical,original to verify
+XTE J1550-564,37.0,"Saraswati et al. 2025 Table 1 (their refs: Orosz et al. 2002, 2011); Yan & Yu 2015 Table 1 give 37.25 h",dynamical,original to verify
+GRO J1655-40,62.92,"Saraswati et al. 2025 Table 1 (their refs: Beer & Podsiadlowski 2002 and others); Yan & Yu 2015 give 62.88 h",dynamical,original to verify
+GS 2023+338,155.30,"Saraswati et al. 2025 Table 1 (their refs: Casares et al. 2019 and others)",dynamical,V404 Cyg; original to verify
+SAX J1819.3-2525,67.61,"Saraswati et al. 2025 Table 1 (their refs: Orosz et al. 2001; MacDonald et al. 2014)",dynamical,V4641 Sgr; original to verify
+XTE J1650-500,7.63,"Yan & Yu 2015 Table 1 (their refs: Homan et al.; Orosz et al.)",dynamical,original to verify
+MAXI J1659-152,2.41,"Yan & Yu 2015 Table 1 (their refs: Kuulkers et al. 2013; Yamaoka et al. 2012); BlackCAT 2.414 h",candidate,period from X-ray dips; original to verify
+XTE J1859+226,6.58,"Yan & Yu 2015 Table 1 (their refs: Corral-Santana et al. 2011); Yanes-Rizo et al. 2022 give 0.276 d = 6.62 h",dynamical,original to verify

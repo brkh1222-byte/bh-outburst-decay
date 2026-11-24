@@ -1,0 +1,254 @@
+/Users/berkh/Desktop/bh-outburst-decay/.venv/lib/python3.14/site-packages/emcee/moves/red_blue.py:99: RuntimeWarning: invalid value encountered in scalar subtract
+  lnpdiff = f + nlp - state.log_prob[j]
+/Users/berkh/Desktop/bh-outburst-decay/.venv/lib/python3.14/site-packages/emcee/moves/red_blue.py:99: RuntimeWarning: invalid value encountered in scalar subtract
+  lnpdiff = f + nlp - state.log_prob[j]
+{
+ "AICc": {
+  "M0": 5.46,
+  "M1": 7.58,
+  "M2": 10.6
+ },
+ "LOSO_plugin_ML": {
+  "M0": -2.36,
+  "M1": -5.67,
+  "M2": -6.97
+ },
+ "primary_B": [
+  -0.169,
+  0.169,
+  0.521
+ ],
+ "P_B_gt": {
+  "0": 0.853,
+  "0.3333333333333333": 0.16,
+  "0.5": 0.031,
+  "0.6666666666666666": 0.006,
+  "0.8333333333333334": 0.001
+ },
+ "leave_one_system_out": {
+  "4U 1543-47": {
+   "B": [
+    -0.161,
+    0.188,
+    0.543
+   ],
+   "dAIC_M1_minus_M0": 0.44
+  },
+  "GRO J1655-40": {
+   "B": [
+    -0.28,
+    0.077,
+    0.443
+   ],
+   "dAIC_M1_minus_M0": 1.67
+  },
+  "GRS 1716-249": {
+   "B": [
+    -0.014,
+    0.247,
+    0.518
+   ],
+   "dAIC_M1_minus_M0": -2.26
+  },
+  "GS 1354-64": {
+   "B": [
+    -0.164,
+    0.224,
+    0.607
+   ],
+   "dAIC_M1_minus_M0": 0.02
+  },
+  "GX 339-4": {
+   "B": [
+    -0.218,
+    0.143,
+    0.526
+   ],
+   "dAIC_M1_minus_M0": 1.24
+  },
+  "MAXI J1659-152": {
+   "B": [
+    -0.311,
+    0.059,
+    0.467
+   ],
+   "dAIC_M1_minus_M0": 1.89
+  },
+  "MAXI J1803-298": {
+   "B": [
+    -0.21,
+    0.142,
+    0.493
+   ],
+   "dAIC_M1_minus_M0": 1.02
+  },
+  "MAXI J1820+070": {
+   "B": [
+    -0.186,
+    0.161,
+    0.518
+   ],
+   "dAIC_M1_minus_M0": 0.78
+  },
+  "Swift J1727.8-1613": {
+   "B": [
+    -0.181,
+    0.175,
+    0.536
+   ],
+   "dAIC_M1_minus_M0": 0.67
+  },
+  "Swift J1753.5-0127": {
+   "B": [
+    -0.188,
+    0.183,
+    0.574
+   ],
+   "dAIC_M1_minus_M0": 0.62
+  },
+  "XTE J1550-564": {
+   "B": [
+    -0.101,
+    0.219,
+    0.566
+   ],
+   "dAIC_M1_minus_M0": -0.38
+  },
+  "XTE J1650-500": {
+   "B": [
+    -0.164,
+    0.175,
+    0.533
+   ],
+   "dAIC_M1_minus_M0": 0.7
+  },
+  "XTE J1859+226": {
+   "B": [
+    -0.203,
+    0.15,
+    0.501
+   ],
+   "dAIC_M1_minus_M0": 0.97
+  }
+ },
+ "variants": {
+  "spectroscopic orbits only (drop GRS 1716-249, MAXI J1659-152, MAXI J1803-298)": {
+   "N_sources": 10,
+   "N_outbursts": 23,
+   "B": [
+    -0.211,
+    0.122,
+    0.501
+   ]
+  },
+  "dynamical only, GRS 1716-249 counted as candidate": {
+   "N_sources": 10,
+   "N_outbursts": 23,
+   "B": [
+    -0.211,
+    0.122,
+    0.501
+   ]
+  },
+  "without XTE J1550-564 2001 mini-outburst": {
+   "N_sources": 13,
+   "N_outbursts": 25,
+   "B": [
+    -0.141,
+    0.184,
+    0.509
+   ]
+  },
+  "literature (ASM) values shifted by +0.16 dex": {
+   "N_sources": 13,
+   "N_outbursts": 26,
+   "B": [
+    -0.131,
+    0.197,
+    0.539
+   ]
+  },
+  "discrepant duplicates: sigma = max(sigma, half the difference)": {
+   "N_sources": 13,
+   "N_outbursts": 26,
+   "B": [
+    -0.163,
+    0.171,
+    0.5
+   ]
+  },
+  "per-system variance + sigma_out^2/n (sigma_out = 0.27 dex)": {
+   "N_sources": 13,
+   "N_outbursts": 26,
+   "B": [
+    -0.091,
+    0.232,
+    0.533
+   ]
+  },
+  "tau_d,50-90 (early decay only; exploratory)": {
+   "N_sources": 13,
+   "N_outbursts": 26,
+   "B": [
+    -0.542,
+    0.051,
+    0.664
+   ]
+  }
+ },
+ "hierarchical_halfnormal": {
+  "B": [
+   -0.162,
+   0.214,
+   0.578
+  ],
+  "sigma_src_dex": [
+   0.006,
+   0.116,
+   0.346
+  ],
+  "sigma_out_dex": [
+   0.192,
+   0.276,
+   0.408
+  ],
+  "prior": "half-normal, scale 0.5 dex"
+ },
+ "bat_checks": {
+  "GS1354-64_BAT_median_MJD58505-58545_crab": 0.0051,
+  "GX339-4_2013_max3d_MAXI2-10_crab": 0.057,
+  "GX339-4_2013_max3d_BAT15-50_crab": 0.178,
+  "GX339-4_2017-18_max3d_MAXI2-10_crab": 0.059,
+  "GX339-4_2017-18_max3d_BAT15-50_crab": 0.147,
+  "GX339-4_2022_max3d_MAXI2-10_crab": 0.029,
+  "GX339-4_2022_max3d_BAT15-50_crab": 0.099
+ },
+ "LOSO_pp_lpd": {
+  "M0": -2.17,
+  "M1": -3.18,
+  "M2": -2.79
+ },
+ "validation": {
+  "TW_vs_S25": {
+   "N": 9,
+   "median": -0.039,
+   "MAD_scatter": 0.064,
+   "SD": 0.305,
+   "rms": 0.326
+  },
+  "TW_vs_YY15": {
+   "N": 5,
+   "median": 0.162,
+   "MAD_scatter": 0.195,
+   "SD": 0.182,
+   "rms": 0.201
+  },
+  "YY15_vs_S25": {
+   "N": 9,
+   "median": -0.049,
+   "MAD_scatter": 0.098,
+   "SD": 0.245,
+   "rms": 0.244
+  }
+ }
+}
