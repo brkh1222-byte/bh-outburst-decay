@@ -13,12 +13,19 @@ Policy: Claude runs the project and drafts the paper; the researcher edits later
   - data/sample.csv: recorded hash reproduced with LF line endings (now CRLF) + GRS 1716-249 row without two status remarks + MAXI J1659-152 row with `in_tau_porb_test=False` and note "validation only: ...". None of these fields is read by the analysis code.
 - CLAUDE.md / TASKS.md updated to the new roles policy.
 
+- Amendment written: results/analysis_plan_amendment_1.md (+ src/amendment_checks.py, results/amendment_1_checks.json). Frozen-input re-run: primary H1 byte-identical; only "+ re-flares" row differs (B 0.05 vs 0.17).
+- references.bib verified by helper against Crossref (44 entries; 3 titles corrected; Tominaga et al. 2020 added and verified).
+- T2.2 done: src/plot_lightcurves.py -> results/lightcurves/*.png (24 sources + overview).
+- GS 1354-64 / MAXI J1348-630 confusion re-checked: notes/confusion_check.md (claim softened to "most likely contamination").
+- src/audit_numbers.py -> results/paper_numbers.json (every derived number in the paper).
+- paper/main.tex revision 2 in progress (placeholders for authors/AI statement, plan paragraph, limitations, confusion section done).
+
 ### In progress
-- Replica run of the H1 pipeline with the reconstructed frozen inputs (in the session scratchpad, not in the repo) to show the H1 numbers are unchanged. Timescale tables already identical except the one new flag; primary sample files identical byte for byte.
-- Helper agents: (1) references.bib verification against Crossref/arXiv/ADS; (2) T1.1 novelty search.
+- T3.3 decay fits running: `nice .venv/bin/python -m src.fit_decay --steps 4000 > results/decay_fits.log` (rerun the same command if interrupted; it rewrites results/decay_fits.csv at the end).
+- Helper agent: T1.1 novelty search (result to be written to notes/novelty.md).
 
 ### Next
-- Write results/analysis_plan_amendment_1.md; T2.2 light-curve script + figures; T3.3 decay-shape fits (lmfit then emcee); re-verify the GS 1354-64 / MAXI J1348-630 confusion claim (notes/confusion_check.md); number audit table in paper/notes.md; revise paper/main.tex.
+- Add decay-fit subsection to the paper; audit table in paper/notes.md; novelty notes; tick TASKS.md; final commit.
 
 ### Needs the researcher
 - T2.4 MAXI on-demand 2-12 keV light curves (manual web tool).

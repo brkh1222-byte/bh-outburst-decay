@@ -1,4 +1,5 @@
-% Draft manuscript for MNRAS (revision 1, after internal referee review, 2026-11-22).
+% Draft manuscript for MNRAS (revision 2, 2026-11-25: integrity amendment, decay-shape fits, number audit).
+% Drafted by an AI assistant for the researcher to edit. Authorship and the AI-use statement are placeholders.
 % Compile with mnras.cls (e.g. Overleaf "MNRAS template"):
 %   pdflatex main && bibtex main && pdflatex main && pdflatex main
 % Every number comes from results/ : h1_results.json, h1_robustness.csv, h1_hierarchical.txt,
@@ -17,11 +18,12 @@
 \newcommand{\porb}{P_{\rm orb}}
 \newcommand{\dex}{\,dex}
 
-\title[BH transient decay times vs orbital period]{Disc size is not the main factor in the decay: outburst timescales of black hole X-ray transients in the MAXI era and a statistical test against orbital period}
+\title[BH transient decay times vs orbital period]{Do larger discs decay more slowly? Outburst timescales of black hole X-ray transients in the MAXI era and a statistical test against orbital period}
 
-\author[B. {[Surname]}]{Berkh [Surname]$^{1}$\thanks{E-mail: [author e-mail]}
+% Authorship is undecided. Do not fill in without the researcher's decision.
+\author[{[AUTHORS --- TBD]}]{[AUTHORS --- TBD]\thanks{E-mail: [TBD]}
 \\
-$^{1}$Independent researcher, [City, Country]}
+[Affiliations --- TBD]}
 
 \date{Accepted XXX. Received YYY; in original form ZZZ}
 \pubyear{2026}
@@ -32,7 +34,7 @@ $^{1}$Independent researcher, [City, Country]}
 \maketitle
 
 \begin{abstract}
-In the irradiated disc instability model, a black hole transient decays on the viscous time of its hot disc, so systems with longer orbital periods, and larger discs, should decay more slowly. We test this. We measure two-point e-folding rise and decay times (the Yan \& Yu 2015 definition) for black hole and candidate outbursts observed by MAXI and Swift/BAT, giving a catalogue of 55 outburst windows from 2016--2026, with 24 unconfused bright main outbursts from 13 sources. We validate the method against two published samples and with injection--recovery in real MAXI data, fix the analysis plan, and combine our values with RXTE-era measurements for systems with independently measured periods: 26 outbursts of 13 systems with $\porb=0.10$--$2.62$\,d. The slope of $\log\taud$ against $\log\porb$ is $B=0.17$ (95 per cent interval $-0.17$ to $0.52$), so the predicted increase is not detected. Standard disc scalings predict $B\approx2/3$--$5/6$; slopes of $2/3$ or more have posterior probability 0.006 and are excluded in every leave-one-system-out fit. A shallower slope near $1/3$ remains allowed. Outbursts of the same system scatter by 0.27\dex, as much as systems scatter about the fit (0.24\dex), so the period is at most a minor factor. We also find that two groups applying the same method to the same RXTE data differ by up to a factor of 4.6, and that a published 2019 outburst of GS~1354$-$64 is MAXI~J1348$-$630.
+In the irradiated disc instability model, a black hole transient decays on the viscous time of its hot disc, so systems with longer orbital periods, and larger discs, should decay more slowly. We test this. We measure two-point e-folding rise and decay times (the Yan \& Yu 2015 definition) for black hole and candidate outbursts observed by MAXI and Swift/BAT, giving a catalogue of 55 outburst windows from 2016--2026, with 24 unconfused bright main outbursts from 13 sources. We validate the method against two published samples and with injection--recovery in real MAXI data, write the analysis plan before running the test, and combine our values with RXTE-era measurements for systems with independently measured periods: 26 outbursts of 13 systems with $\porb=0.10$--$2.62$\,d. The slope of $\log\taud$ against $\log\porb$ is $B=0.17$ (95 per cent interval $-0.17$ to $0.52$), so the predicted increase is not detected; the test had a power of 0.84 for a slope of 0.5 but only 0.39 for a slope of 0.3. Standard disc scalings predict $B\approx2/3$--$5/6$; slopes of $2/3$ or more have posterior probability 0.006 and are excluded in every leave-one-system-out fit. A shallower slope near $1/3$ remains allowed. Outbursts of the same system scatter by 0.27\dex, as much as systems scatter about the fit (0.24\dex), so in this sample of 13 systems the period is not the main factor. We also find that two groups applying the same method to the same RXTE data differ by up to a factor of 4.6, and that a published 2019 outburst of GS~1354$-$64 is most likely contamination from MAXI~J1348$-$630, 1.8\degr\ away.
 \end{abstract}
 
 \begin{keywords}
@@ -55,7 +57,7 @@ This paper makes that test. Our aims are:
 \begin{enumerate}
 \item to build a uniform catalogue of rise and decay timescales for black hole and candidate outbursts observed by MAXI in 2016--2026, with the \citet{YanYu2015} definition so that it can be merged with the earlier samples;
 \item to validate the measurement against both earlier samples and against simulated outbursts in real MAXI data, before running the test;
-\item to test, with a plan fixed in advance, whether the decay time increases with orbital period (hypothesis H1).
+\item to test, with an analysis plan written before the test was run, whether the decay time increases with orbital period (hypothesis H1).
 \end{enumerate}
 Section~\ref{sec:theory} derives the slope that the irradiated disc model predicts. Section~\ref{sec:data} describes the data and sample, and Section~\ref{sec:method} the measurements, validation and statistics. Section~\ref{sec:results} presents the results, Section~\ref{sec:discussion} discusses them, and Section~\ref{sec:conclusions} summarizes.
 
@@ -181,7 +183,7 @@ Before running the test of H1, we compared our measurements with both literature
 \subsection{Statistical test}
 \label{sec:stats}
 
-\textit{Plan.} We wrote the analysis plan after the validation and recorded its SHA-256 fingerprint (2026 November 21, 21:54 UTC) before the first test. According to file timestamps, two implementation clarifications were appended to the plan, and the table of literature periods was finalized, in the following two minutes, before the first result was produced (21:57 UTC). The recorded fingerprint matches the plan text without the appended section. The plan was not deposited in an external registry, so these times cannot be verified independently. All files are part of the data release.
+\textit{Plan.} We wrote the analysis plan after the validation and before the first run of the test, and recorded SHA-256 fingerprints of the plan, the measurement code, the source table and the window-override file (2026 November 21, 21:54 UTC). We do not describe the analysis as pre-registered, for four reasons. (i) The fingerprint was only stored locally; nothing was deposited in a registry or a public repository until after the results existed, so its time cannot be verified independently. (ii) Two implementation clarifications (below) were appended to the plan two minutes after the fingerprint; according to file timestamps this was before the first run started, but they were written with knowledge of which outbursts they affect. (iii) The script that runs the test and the table of literature periods were written after the fingerprint and are not covered by it, and the script was modified after the first run (to seed the random-number generators, according to our notes; the first-run output was not kept). (iv) After the first result, one more window was flagged for source confusion (Section~\ref{sec:extra}). We have reconstructed the fingerprinted versions of all changed files exactly, and re-running the test on them gives an identical primary result; only robustness check (i) changes (Section~\ref{sec:robust}). The plan, the fingerprints and a dated amendment describing these points are part of the data release.
 
 \textit{Sample.} The plan fixes the primary sample as all bright outbursts of systems with an independent period, excluding re-flares and outbursts affected by source confusion. Failed outbursts that never reach the soft state are included. For each outburst our MAXI value is used if we measured it, whatever its date. Otherwise we use the mean of $\log\taud$ from the two literature samples, or the single available value.
 
@@ -207,7 +209,7 @@ where the intrinsic scatter $\sigma_{\rm int}$ is a free parameter \citep{Kelly2
 (viii) a hierarchical model on individual outbursts. This model has a random effect per system, $\log\tau_{jk}=A+B\,x_k+u_k+e_{jk}$, with $u_k\sim\mathcal{N}(0,\sigma_{\rm sys}^2)$ and $e_{jk}\sim\mathcal{N}(0,\sigma_{\rm out}^2+\sigma_{jk}^2)$. Here $\sigma_{\rm sys}$ is the real scatter between systems beyond the period dependence, and $\sigma_{\rm out}$ the real scatter between outbursts of one system. We integrate the $u_k$ out analytically and sample $A$, $B$, $\log\sigma_{\rm sys}$ and $\log\sigma_{\rm out}$ with flat priors (log-uniform for the scatters, lower bound $10^{-3}$\dex).
 The rise time (H2) is tested in the same way, as an exploratory analysis.
 
-\textit{Implementation clarifications.} Two details were added to the plan before the first result, without changing any rule. First, a literature outburst counts as measured by us if its peak date lies inside one of our outburst windows. This prevents double counting of multi-peaked outbursts, whose peaks in different bands can be more than 20\,d apart. Second, for MAXI-era literature outbursts that our detection did not find, the 0.1\,Crab limit is applied to our own 2--10\,keV data within 15\,d of the published peak.
+\textit{Implementation clarifications.} Two details were added to the plan after the fingerprint and, according to file timestamps, before the first run. First, a literature outburst counts as measured by us if its peak date lies inside one of our outburst windows. This prevents double counting of multi-peaked outbursts, whose peaks in different bands can be more than 20\,d apart. Second, for MAXI-era literature outbursts that our detection did not find, the 0.1\,Crab limit is applied to our own 2--10\,keV data within 15\,d of the published peak. Both rules decide which literature outbursts enter the sample, so we also ran the test without them (Section~\ref{sec:robust}).
 
 \subsection{Checks added after the plan}
 \label{sec:extra}
@@ -218,7 +220,9 @@ After an internal review of the first results, we added checks that are not part
 (c) the posterior probability of the theoretical slopes of Section~\ref{sec:theory};
 (d) further variants: periods from radial-velocity orbits only; without the one Saraswati mini-outburst that passes our flux cut (XTE~J1550$-$564 in 2001, 0.11\,Crab); ASM values shifted by the measured offset of $+0.16$\dex\ (Section~\ref{sec:val_results}); the error of each discrepant duplicate raised to half the difference between the two published values; a per-system variance that includes an outburst-to-outburst term, $\sigma_k^2+\sigma_{\rm out}^2/n_k$ with $\sigma_{\rm out}=0.27$\dex\ from the hierarchical model; and the early-decay timescale $\tau_{\rm d,50-90}$, which samples the phase most likely to be exponential;
 (e) the hierarchical model with half-normal priors (scale 0.5\dex) on $\sigma_{\rm sys}$ and $\sigma_{\rm out}$.
-We also corrected one flag. The re-flare window of GS~1354$-$64 at MJD 58560 is the tail of the confused event of Section~\ref{sec:confusion} but had not been flagged. Flagging it changes only robustness check (i).
+(f) the test with each of the two implementation clarifications undone;
+(g) model fits to the decay light curves (Section~\ref{sec:fits}).
+We also changed one flag after seeing the first results. The re-flare window of GS~1354$-$64 at MJD 58560 is the tail of the confused event of Section~\ref{sec:confusion} but had not been flagged. Flagging it does not change the primary sample, which excludes re-flares, but it changes robustness check (i), and we report that check both ways.
 
 %=====================================================================
 \section{Results}
@@ -316,7 +320,7 @@ The model comparison does not separate the models strongly (Table~\ref{tab:h1}).
 
 \begin{table*}
 \centering
-\caption{Test of H1. Upper part: model comparison for the primary sample (lower AIC, AICc and BIC, and higher LOSO, are better). Lower part: posterior median and 95 per cent interval of $B$, and Kendall's $\tau_{\rm K}$ with its permutation $p$-value. $N_{\rm s}$ and $N_{\rm o}$ are the numbers of systems and outbursts. The primary row uses 10\,000 permutations and the other rows 2000; Kendall's $\tau_{\rm K}$ ignores errors, so it is the same for all rows with the same data.}
+\caption{Test of H1. Upper part: model comparison for the primary sample (lower AIC, AICc and BIC, and higher LOSO, are better). Lower part: posterior median and 95 per cent interval of $B$, and Kendall's $\tau_{\rm K}$ with its permutation $p$-value. $N_{\rm s}$ and $N_{\rm o}$ are the numbers of systems and outbursts. The primary row uses 10\,000 permutations and the other rows 2000; Kendall's $\tau_{\rm K}$ ignores errors, so it is the same for all rows with the same data. $^{a}$With the window-override file as fingerprinted, i.e. including the GS~1354$-$64 window at MJD 58560 that was flagged for confusion after the first results (Section~\ref{sec:extra}).}
 \label{tab:h1}
 \begin{tabular}{lccccc}
 \toprule
@@ -336,6 +340,7 @@ Variant & $N_{\rm s}/N_{\rm o}$ & $B$ (95 per cent interval) & $\tau_{\rm K}$ & 
 Primary & 13/26 & $0.17$ ($-0.17$, $0.52$) & 0.31 & 0.16 \\
 \multicolumn{5}{l}{\textit{Robustness checks in the plan}} \\
 (i) + re-flares & 13/27 & $0.17$ ($-0.18$, $0.51$) & 0.28 & 0.19 \\
+(i) + re-flares, before the late flag$^{a}$ & 13/28 & $0.05$ ($-0.36$, $0.47$) & 0.15 & 0.50 \\
 (ii) + faint outbursts & 15/42 & $-0.05$ ($-0.42$, $0.31$) & $-0.05$ & 0.85 \\
 (iii) Dynamically confirmed only & 11/24 & $0.00$ ($-0.38$, $0.43$) & 0.16 & 0.54 \\
 (iv) This work only & 8/13 & $0.19$ ($-0.29$, $0.70$) & 0.21 & 0.55 \\
@@ -353,6 +358,9 @@ Discrepant duplicates inflated & 13/26 & $0.17$ ($-0.16$, $0.50$) & -- & -- \\
 Variance $\sigma_k^2+\sigma_{\rm out}^2/n_k$ & 13/26 & $0.23$ ($-0.09$, $0.53$) & -- & -- \\
 Hierarchical, half-normal priors & 13/26 & $0.21$ ($-0.16$, $0.58$) & -- & -- \\
 Early decay, $\tau_{\rm d,50-90}$ & 13/26 & $0.05$ ($-0.54$, $0.66$) & -- & -- \\
+Clarification 1 undone ($\pm20$\,d peak matching) & 13/28 & $0.18$ ($-0.16$, $0.52$) & -- & -- \\
+Clarification 2 undone (literature flux cut only) & 13/28 & $0.15$ ($-0.18$, $0.48$) & -- & -- \\
+Both clarifications undone & 13/30 & $0.15$ ($-0.18$, $0.49$) & -- & -- \\
 \bottomrule
 \end{tabular}
 \end{table*}
@@ -360,7 +368,7 @@ Early decay, $\tau_{\rm d,50-90}$ & 13/26 & $0.05$ ($-0.54$, $0.66$) & -- & -- \
 \subsection{Robustness and influence}
 \label{sec:robust}
 
-Every robustness check gives a slope consistent with zero (Table~\ref{tab:h1}). The largest median slope, 0.24, comes from the literature-only sample, which has the widest interval. Adding the faint outbursts, which include the mini-outbursts of \citet{Saraswati2025}, gives $-0.05$, and restricting the sample to dynamically confirmed black holes gives $0.00$ (GRS~1716$-$249 counted as dynamical; counting it as a candidate gives $0.12$, $-0.21$ to $0.50$). Correcting for the offset between ASM and MAXI, inflating the errors of discrepant literature values, or giving systems with many outbursts more weight changes $B$ by less than 0.07.
+Every robustness check gives a slope consistent with zero (Table~\ref{tab:h1}). Check (i) is the only one affected by the flag that we added after the first results: with the confused GS~1354$-$64 re-flare window included, as in the fingerprinted files, it gives $B=0.05$ ($-0.36$ to $0.47$), and without it $0.17$ ($-0.18$ to $0.51$). Undoing either or both of the implementation clarifications adds two to four literature outbursts and gives $B=0.15$--$0.18$ with upper limits of $0.48$--$0.52$. The largest median slope, 0.24, comes from the literature-only sample, which has the widest interval. Adding the faint outbursts, which include the mini-outbursts of \citet{Saraswati2025}, gives $-0.05$, and restricting the sample to dynamically confirmed black holes gives $0.00$ (GRS~1716$-$249 counted as dynamical; counting it as a candidate gives $0.12$, $-0.21$ to $0.50$). Correcting for the offset between ASM and MAXI, inflating the errors of discrepant literature values, or giving systems with many outbursts more weight changes $B$ by less than 0.07.
 
 Refitting without each system in turn gives median slopes from 0.06 (without MAXI~J1659$-$152) to 0.25 (without GRS~1716$-$249), and 95 per cent upper limits from 0.44 to 0.61. GRS~1716$-$249 is the most influential system: it has a short period and the second-longest mean decay time. Without it, $B=0.25$ ($-0.01$ to $0.52$), and AIC prefers M1 over M0 by 2.3. GRS~1716$-$249 is the system whose period and black hole status are least certain (Section~\ref{sec:sample}), and its 2016--17 outburst stayed in the hard state. Without MAXI~J1659$-$152, the system with the shortest period, $B=0.06$. The sign and size of a possible weak trend therefore depend on single systems, but the upper limit on $B$ does not change much.
 
@@ -397,7 +405,7 @@ The shape ratios of the 24 bright 2016--2026 outbursts range from 0.11 to 13, wi
 \subsection{What the null result means for the irradiated disc picture}
 \label{sec:physics}
 
-For the exponential phase, the irradiated disc model predicts $B\approx2/3$ if the outer disc is irradiation-dominated and $B\approx5/6$ for a viscously heated Kramers disc (Section~\ref{sec:theory}). Our data exclude both: $P(B\ge2/3)=0.006$, and $B=2/3$ lies above the 95 per cent upper limit in every leave-one-system-out fit and in both hierarchical models. The shallow limiting case, $B\simeq1/3$, lies inside our interval ($P(B\ge1/3)=0.16$), and our power to detect a slope of 0.3 was only 0.39. We therefore cannot exclude a weak dependence on disc size, and we do not claim that decay times are independent of it. What the data show is that the period is not the main factor. Across our period range of 1.42\dex, a slope of $1/3$ would change $\taud$ by 0.47\dex; the outbursts of GX~339$-$4 alone span 0.80\dex.
+For the exponential phase, the irradiated disc model predicts $B\approx2/3$ if the outer disc is irradiation-dominated and $B\approx5/6$ for a viscously heated Kramers disc (Section~\ref{sec:theory}). Our data disfavour both: $P(B\ge2/3)=0.006$, and $B=2/3$ lies above the 95 per cent upper limit in every leave-one-system-out fit and in both hierarchical models. The shallow limiting case, $B\simeq1/3$, lies inside our interval ($P(B\ge1/3)=0.16$), and our power to detect a slope of 0.3 was only 0.39. We therefore cannot exclude a weak dependence on disc size, and we do not claim that decay times are independent of it. What the data show is that the period is not the main factor. Across our period range of 1.42\dex, a slope of $1/3$ would change $\taud$ by 0.47\dex; the outbursts of GX~339$-$4 alone span 0.80\dex.
 
 Several effects can produce such large variation, and can weaken the dependence on the orbit. In the model of \citet{KingRitter1998} the decay is exponential only while the X-rays ionize the disc to its edge. An outburst that starts with less mass in the disc, or reaches a lower peak, ionizes a smaller region, and its decay is then set by the peak luminosity rather than by the orbit \citep{Shahbaz1998}. The disc mass at the start of an outburst depends on how long the system has been in quiescence, and this differs between outbursts. Thermal winds driven by irradiation remove mass from the outer disc at a rate that changes during the outburst \citep{Tetarenko2018a,Dubus2019}. \citet{Tetarenko2018a} derived $\alpha$ from the decays of black hole outbursts with disc radii based on orbital periods, and found values that differ between systems. Differences in $\alpha$, or in the strength of irradiation \citep{Tetarenko2018b}, of a factor of a few would hide a slope of the size predicted. The $2/3$ and $5/6$ slopes assume that such quantities are similar from system to system, so our result can also be read as evidence that they are not.
 
@@ -416,19 +424,23 @@ The two-point e-folding time is simple and needs no model, which is why it is th
 \subsection{Source confusion in MAXI light curves}
 \label{sec:confusion}
 
-The angular resolution of the MAXI GSC is about 1.5\degr\ \citep{Mihara2011}, so sources that are close on the sky can contaminate each other's light curves. \citet{Saraswati2025} list an outburst of GS~1354$-$64 that peaked at MJD 58524 with 1.92\,Crab. This date coincides with the peak of MAXI~J1348$-$630 (MJD 58523.5 in our data), a bright new transient 1.82\degr\ away. The BAT light curve of GS~1354$-$64 shows no outburst at that time: its median 15--50\,keV flux between MJD 58505 and 58545 was 0.005\,Crab. We conclude that this event belongs to MAXI~J1348$-$630, and we flag it, together with the corresponding MAXI windows of GS~1354$-$64. Similarly, the MAXI light curve of MAXI~J1631$-$479 has the same outburst history as 4U~1630$-$47, 0.6\degr\ away. We flag all its windows, and the 2019 outburst of 4U~1630$-$47, which overlapped with the outburst of MAXI~J1631$-$479. Catalogues built automatically from MAXI light curves should check every outburst of a source with a bright neighbour within about 2\degr, for example against BAT, which has a narrower point spread function.
+The point-spread function of the MAXI GSC is about 1.5\degr\ wide \citep{Mihara2011}, so sources that are close on the sky can contaminate each other's light curves. \citet{Saraswati2025} list in their table~2 an outburst of GS~1354$-$64 that peaked at MJD 58524 with 1.92\,Crab. We think that this event is most likely contamination from MAXI~J1348$-$630, a bright transient 1.82\degr\ away that was discovered by MAXI on 2019 January 26 \citep{Tominaga2020}. The evidence is as follows. (i) The 2--10\,keV light curve of MAXI~J1348$-$630 peaks at 3.1\,Crab on MJD 58523.5 in our data, within a day of the listed peak. (ii) The MAXI standard light curve of GS~1354$-$64 follows that of MAXI~J1348$-$630 through the whole event (Pearson $r=0.84$ over MJD 58495--58625), rising from 0.002\,Crab to 0.4\,Crab, while it was at 0.001\,Crab before the discovery of MAXI~J1348$-$630. (iii) BAT, a coded-mask imager that separates the two positions, shows no outburst of GS~1354$-$64: its median 15--50\,keV flux between MJD 58505 and 58545 was 0.005\,Crab, with no daily detection above $3\sigma$, whereas the same BAT light curve reaches 0.26\,Crab in the 2015 outburst and about 0.2\,Crab in the 2025--26 outburst. (iv) We found no report of an outburst of GS~1354$-$64 in 2019; its recorded outbursts are those of 1987, 1997, 2015 and 2025--26.
+
+This conclusion has limits. We have not reproduced the 2--12\,keV light curve that \citet{Saraswati2025} used, and their peak fluxes for GS~1354$-$64 are about four times those of the MAXI standard product for both the 2015 and the 2019 event, which we cannot explain. BAT could in principle miss an outburst that was entirely soft, although the known outbursts of this source were hard. We therefore describe the event as most likely contamination rather than as a certain misidentification. We flag it, together with the corresponding MAXI windows of GS~1354$-$64 in our own catalogue. Similarly, the MAXI light curve of MAXI~J1631$-$479 has the same outburst history as 4U~1630$-$47, 0.6\degr\ away. We flag all its windows, and the 2019 outburst of 4U~1630$-$47, which overlapped with the outburst of MAXI~J1631$-$479. Catalogues built automatically from MAXI light curves should check every outburst of a source with a bright neighbour within about 2\degr, for example against BAT.
 
 \subsection{Limitations}
 \label{sec:limits}
 
 \begin{itemize}
-\item \textit{Sample size.} Thirteen systems give limited power: a slope of 0.3 would be detected only about 40 per cent of the time. The upper limit on $B$ is the more robust result.
+\item \textit{Sample size and power.} The test rests on 13 systems, nine of them with a single outburst. The power analysis gave a probability of 0.84 of detecting a slope of 0.5 but only 0.39 for a slope of 0.3, so a non-detection says little about shallow slopes. The sign and size of the best-fitting slope depend on single systems (Section~\ref{sec:robust}). The upper limit on $B$ is the more robust result, and even that comes from one sample analysed with one estimator.
+\item \textit{Mixed sample.} The 26 outbursts combine three sets of measurements (ours, and two from the literature) from two instruments and two energy bands, joined by a single method uncertainty of 0.19\dex\ that was estimated from only five to nine outbursts per comparison.
 \item \textit{Selection against failed outbursts.} The 0.1\,Crab limit is applied in soft X-rays, where hard-state outbursts are faint. The 2013, 2017--18 and 2022 outbursts of GX~339$-$4 peaked at 0.03--0.06\,Crab in MAXI (2--10\,keV) but at 0.10--0.18\,Crab in BAT (15--50\,keV, three-day medians). Failed outbursts, about a third of all outbursts \citep{Alabarta2021}, are therefore under-represented in our sample and in both earlier samples. Including the faint events did not change the result.
 \item \textit{Energy band and calibration.} Our 2--10\,keV band differs from the 2--12\,keV band of the literature, and the published MAXI-era peak fluxes differ from ours (Section~\ref{sec:compare}). The good agreement in $\taud$ with \citet{Saraswati2025} for most outbursts suggests that the effect on timescales is small, but a direct check with MAXI on-demand 2--12\,keV light curves remains to be done.
 \item \textit{Orbital periods.} For five literature systems we used the periods tabulated by \citet{YanYu2015} or \citet{Saraswati2025} rather than reading them from the original papers. The two candidates have periods from X-ray dips, and GRS~1716$-$249 has a photometric period. Using only radial-velocity orbits gives $B=0.12$ ($-0.21$ to $0.50$).
 \item \textit{Errors.} The Monte Carlo errors of two-point timescales are not always centred on the measured values (Section~\ref{sec:errors}), and the injection tests use single exponentials only.
 \item \textit{Luminosity.} We have not converted peak fluxes to Eddington ratios, which needs distances, masses and a bolometric correction. Whether $\taud$ depends on the peak Eddington ratio, and whether that dependence differs between short and long periods, is left to future work.
-\item \textit{Plan.} The analysis plan was fixed and fingerprinted before the test but not deposited in an external registry (Section~\ref{sec:stats}).
+\item \textit{Status of the analysis plan.} The plan was written before the test but was not pre-registered, and it was not frozen in a way that others can verify (Section~\ref{sec:stats}): the fingerprint is local, the test script and the period table were written after it, two clarifications were appended to it, the first-run output was not kept, and one confusion flag was added after the first results. The primary result is unchanged when the fingerprinted input files are restored and when the clarifications are undone, but the test should be read as a planned analysis with documented deviations, not as a registered one.
+\item \textit{Model fits.} The decay-shape fits of Section~\ref{sec:fits} were not planned, use a simple noise model and a band-limited flux, and are exploratory.
 \end{itemize}
 
 %=====================================================================
@@ -438,31 +450,31 @@ The angular resolution of the MAXI GSC is about 1.5\degr\ \citep{Mihara2011}, so
 We measured uniform two-point rise and decay times for black hole and candidate outbursts observed by MAXI and Swift/BAT in 2016--2026. Combined with RXTE-era measurements, they allowed a formal test of whether decay times grow with orbital period, as the irradiated disc instability model predicts. Our main conclusions are as follows.
 \begin{enumerate}
 \item In 26 bright outbursts of 13 systems with $\porb=0.10$--$2.62$\,d, the decay time does not increase significantly with orbital period. The slope of $\log\taud$ against $\log\porb$ is $0.17$ ($-0.17$ to $0.52$, 95 per cent), and a constant decay time of about 30\,d describes the data as well as a power law. This holds in every robustness check.
-\item Slopes of $2/3$ and $5/6$, expected for the exponential phase of irradiated and viscously heated discs, are excluded (posterior probabilities 0.006 and 0.001), and $B=2/3$ is excluded at 95 per cent in every leave-one-system-out fit. A shallow slope near $1/3$ remains allowed.
+\item Slopes of $2/3$ and $5/6$, expected for the exponential phase of irradiated and viscously heated discs, are disfavoured (posterior probabilities 0.006 and 0.001), and $B=2/3$ lies above the 95 per cent upper limit in every leave-one-system-out fit. A shallow slope near $1/3$ remains allowed, and the test had little power to detect one.
 \item The scatter in decay time between outbursts of the same system (0.27\dex, pooled over four systems and dominated by GX~339$-$4) is as large as the scatter between systems, and no additional scatter between systems is needed. The decay time of an outburst is therefore set mainly by the conditions of that outburst, with the orbit at most a minor factor. Rise times, in contrast, differ more between systems than between outbursts.
 \item The two-point e-folding time is reproducible to about 0.05--0.10\dex\ for single-peaked outbursts, but two groups using the same definition and data differ by up to a factor of 4.6 for complex outbursts. Combined analyses should include a method uncertainty and report the selected points.
-\item A published 2019 outburst of GS~1354$-$64 belongs to MAXI~J1348$-$630, and the MAXI light curve of MAXI~J1631$-$479 is dominated by 4U~1630$-$47. Catalogues built from MAXI light curves need confusion checks.
+\item A published 2019 outburst of GS~1354$-$64 is most likely contamination from MAXI~J1348$-$630, and the MAXI light curve of MAXI~J1631$-$479 is dominated by 4U~1630$-$47. Catalogues built from MAXI light curves need confusion checks.
 \end{enumerate}
-The catalogue, the code and the analysis plan are public, so that the test can be repeated as new periods are measured and new outbursts occur.
+These conclusions rest on 13 systems and on an analysis plan that was written in advance but not registered. The catalogue, the code, the plan and the record of its deviations are public, so that the test can be repeated as new periods are measured and new outbursts occur.
 
 %=====================================================================
 \section*{Acknowledgements}
 
 This research used MAXI data provided by RIKEN, JAXA and the MAXI team, and Swift/BAT transient monitor results provided by the Swift/BAT team. It made use of the BlackCAT catalogue and of NASA's Astrophysics Data System. The analysis used \textsc{numpy} \citep{Harris2020}, \textsc{scipy} \citep{Virtanen2020}, \textsc{pandas} \citep{McKinney2010}, \textsc{astropy} \citep{Astropy2022}, \textsc{emcee} \citep{ForemanMackey2013} and \textsc{matplotlib} \citep{Hunter2007}.
 
-\textit{Use of AI tools.} An AI assistant (Claude, Anthropic) was used to write the analysis code, to search for and check references, to review the analysis, and to draft the text of this manuscript. The author checked the code, the results and the citations and takes full responsibility for the content.
+\textit{Use of AI tools.} [AI-USE STATEMENT --- TBD] % Facts for the statement: an AI assistant (Claude, Anthropic) wrote the analysis code, ran the analysis, searched for and checked the references, reviewed the analysis, and drafted this manuscript; the researcher directed the project and edits the text. The final wording, and the description of who checked what, must be written by the author(s).
 
-\textit{Author contributions.} B.~[Surname]: conceptualization, data curation, formal analysis, investigation, methodology, software, validation, visualization, writing (original draft, review and editing).
+\textit{Author contributions.} [AUTHORS --- TBD]
 
 \textit{Funding.} This work received no specific funding.
 
-\textit{Conflict of interest.} The author declares no conflict of interest.
+\textit{Conflict of interest.} [TBD with authorship.]
 
 \textit{Ethics.} This work uses only public astronomical data and involves no human or animal subjects.
 
 \section*{Data Availability}
 
-The MAXI and Swift/BAT light curves are public at \url{http://maxi.riken.jp} and \url{https://swift.gsfc.nasa.gov/results/transients/}. The full measurement table (all outburst windows, with the dates and fluxes of the selected 90, 50 and 10 per cent points, all rise and decay timescales with Monte Carlo ranges, shape ratios and BAT decay times), the system-parameter table with a reference for every value, the transcribed literature timescales, the analysis plan with its SHA-256 fingerprint, and all code needed to reproduce the figures and tables will be made available at [repository URL, to be added on submission].
+The MAXI and Swift/BAT light curves are public at \url{http://maxi.riken.jp} and \url{https://swift.gsfc.nasa.gov/results/transients/}. The full measurement table (all outburst windows, with the dates and fluxes of the selected 90, 50 and 10 per cent points, all rise and decay timescales with Monte Carlo ranges, shape ratios and BAT decay times), the system-parameter table with a reference for every value, the transcribed literature timescales, the analysis plan with its SHA-256 fingerprints and the dated amendment that records the deviations from it, and all code needed to reproduce the figures and tables are available at \url{https://github.com/brkh1222-byte/bh-outburst-decay}. [A permanent archive with a DOI is to be added on submission.]
 
 \bibliographystyle{mnras}
 \bibliography{references}
