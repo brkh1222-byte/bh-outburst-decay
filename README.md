@@ -10,7 +10,7 @@ Outburst sample and system parameters → MAXI + Swift/BAT light curves → rise
 
 ## Status
 
-🟢 Pipeline built, validated and first H1 result in (22 Nov 2026) — see paper/notes.md and results/method_check.md
+Pipeline built and validated; H1 result: slope B = 0.17, 95% interval −0.17 to 0.52 (13 systems), so the predicted increase of decay time with orbital period is not detected. Draft paper in `paper/main.tex` (AI-drafted, not yet edited by the researcher). Current state: [notes/STATUS.md](notes/STATUS.md). Integrity record of the analysis plan: [results/analysis_plan_amendment_1.md](results/analysis_plan_amendment_1.md).
 
 ## Data credit
 

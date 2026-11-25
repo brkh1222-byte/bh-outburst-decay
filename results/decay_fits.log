@@ -1,0 +1,43 @@
+MAXI J1820+070          58306.5  best linear   exp dBIC 167.8  linear dBIC 0.0  broken dBIC 5.4
+Swift J1727.8-1613      60206.5  best broken   exp dBIC 0.8  linear dBIC 99.3  broken dBIC 0.0
+4U 1543-47              59379.5  best broken   exp dBIC 199.6  linear dBIC 176.6  broken dBIC 0.0
+GX 339-4                55309.5  best broken   exp dBIC 369.0  linear dBIC 145.9  broken dBIC 0.0
+GX 339-4                57085.5  best broken   exp dBIC 33.2  linear dBIC 25.9  broken dBIC 0.0
+GX 339-4                58845.5  best broken   exp dBIC 86.5  linear dBIC 142.6  broken dBIC 0.0
+GX 339-4                59332.5  best broken   exp dBIC 1.8  linear dBIC 24.5  broken dBIC 0.0
+GX 339-4                60351.5  best exp      exp dBIC 0.0  linear dBIC 23.3  broken dBIC 6.6
+GX 339-4                60560.5  best exp      exp dBIC 0.0  linear dBIC 54.9  broken dBIC 3.4
+GRS 1716-249            57821.5  best broken   exp dBIC 261.9  linear dBIC 108.9  broken dBIC 0.0
+MAXI J1803-298          59349.5  best broken   exp dBIC 34.6  linear dBIC 118.4  broken dBIC 0.0
+GS 1354-64              61069.5  best broken   exp dBIC 0.6  linear dBIC 15.9  broken dBIC 0.0
+MAXI J1348-630          58523.5  best broken   exp dBIC 154.9  linear dBIC 147.8  broken dBIC 0.0
+MAXI J1535-571          58016.5  best broken   exp dBIC 179.7  linear dBIC 507.1  broken dBIC 0.0
+/Users/berkh/Desktop/bh-outburst-decay/.venv/lib/python3.14/site-packages/lmfit/minimizer.py:827: RuntimeWarning: invalid value encountered in sqrt
+  np.sqrt(self.result.covar[jvar, jvar])))
+/Users/berkh/Desktop/bh-outburst-decay/.venv/lib/python3.14/site-packages/lmfit/minimizer.py:819: RuntimeWarning: invalid value encountered in sqrt
+  par.stderr = float(np.sqrt(self.result.covar[ivar, ivar]))
+H1743-322               55204.5  best broken   exp dBIC 20.6  linear dBIC 8.1  broken dBIC 0.0
+H1743-322               55425.5  best broken   exp dBIC 28.9  linear dBIC 1.6  broken dBIC 0.0
+H1743-322               55674.5  best broken   exp dBIC 25.0  linear dBIC 10.3  broken dBIC 0.0
+H1743-322               56523.5  best exp      exp dBIC 0.0  linear dBIC 42.6  broken dBIC 3.2
+H1743-322               60016.5  best broken   exp dBIC 13.5  linear dBIC 18.1  broken dBIC 0.0
+H1743-322               61279.5  best broken   exp dBIC 22.1  linear dBIC 80.6  broken dBIC 0.0
+4U 1630-47              55219.5  best exp      exp dBIC 0.0  linear dBIC 14.6  broken dBIC 5.9
+4U 1630-47              55925.5  best broken   exp dBIC 160.3  linear dBIC 152.7  broken dBIC 0.0
+4U 1630-47              57086.5  best broken   exp dBIC 48.4  linear dBIC 90.8  broken dBIC 0.0
+4U 1630-47              57669.5  best linear   exp dBIC 79.6  linear dBIC 0.0  broken dBIC 8.1
+4U 1630-47              58334.5  best broken   exp dBIC 104.7  linear dBIC 2.9  broken dBIC 0.0
+4U 1630-47              58687.5  best linear   exp dBIC 17.9  linear dBIC 0.0  broken dBIC 9.1
+4U 1630-47              58965.5  best broken   exp dBIC 100.7  linear dBIC 46.6  broken dBIC 0.0
+4U 1630-47              59498.5  best exp      exp dBIC 0.0  linear dBIC 11.1  broken dBIC 5.5
+4U 1630-47              60008.5  best broken   exp dBIC 28.0  linear dBIC 29.7  broken dBIC 0.0
+/Users/berkh/Desktop/bh-outburst-decay/.venv/lib/python3.14/site-packages/lmfit/minimizer.py:827: RuntimeWarning: invalid value encountered in sqrt
+  np.sqrt(self.result.covar[jvar, jvar])))
+/Users/berkh/Desktop/bh-outburst-decay/.venv/lib/python3.14/site-packages/lmfit/minimizer.py:819: RuntimeWarning: invalid value encountered in sqrt
+  par.stderr = float(np.sqrt(self.result.covar[ivar, ivar]))
+4U 1630-47              60787.5  best broken   exp dBIC 9.6  linear dBIC 14.8  broken dBIC 0.0
+4U 1630-47              61292.5  best linear   exp dBIC 54.7  linear dBIC 0.0  broken dBIC 6.6
+MAXI J1727-203          58277.5  best broken   exp dBIC 15.0  linear dBIC 28.9  broken dBIC 0.0
+EXO 1846-031            58705.5  best broken   exp dBIC 4.0  linear dBIC 79.6  broken dBIC 0.0
+MAXI J1659-152          55477.5  best exp      exp dBIC 0.0  linear dBIC 61.2  broken dBIC 7.0
+XTE J1752-223           55219.5  best broken   exp dBIC 32.6  linear dBIC 176.2  broken dBIC 0.0

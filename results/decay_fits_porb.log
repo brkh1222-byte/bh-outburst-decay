@@ -1,0 +1,61 @@
+two-point tau_d,10-90 (this work only) {'N_sources': 8, 'N_outbursts': 13, 'B': [-0.2882651879927999, 0.19297445355542292, 0.6912217625041843], 'P_B_ge_2_3': 0.02909375}
+single-exponential fit tau {'N_sources': 8, 'N_outbursts': 13, 'B': [-0.3971703067839883, 0.15916243272267655, 0.7140408102955558], 'P_B_ge_2_3': 0.03345833333333333}
+exponential part of broken fit tau {'N_sources': 8, 'N_outbursts': 13, 'B': [-0.8545584268315222, 0.08299173077916351, 0.9067056487424188], 'P_B_ge_2_3': 0.070578125}
+{
+ "preferred_model[all fitted]": {
+  "N": 35,
+  "best": {
+   "exp": 6,
+   "linear": 4,
+   "broken": 25
+  },
+  "clear_dBIC_gt_6": {
+   "exp": 2,
+   "linear": 3,
+   "broken": 19
+  }
+ },
+ "preferred_model[study era 2016-2026]": {
+  "N": 24,
+  "best": {
+   "exp": 3,
+   "linear": 4,
+   "broken": 17
+  },
+  "clear_dBIC_gt_6": {
+   "exp": 1,
+   "linear": 3,
+   "broken": 12
+  }
+ },
+ "exp_tau_vs_two_point[all fitted]": {
+  "N": 35,
+  "median_dex": -0.001840173583527012,
+  "robust_scatter_dex": 0.10258490769479506,
+  "SD_dex": 0.22556088574175207,
+  "max_abs_dex": 1.118556124500992
+ },
+ "exp_tau_vs_two_point[study era 2016-2026]": {
+  "N": 24,
+  "median_dex": 0.00195335505169285,
+  "robust_scatter_dex": 0.10927728086654073,
+  "SD_dex": 0.14215033693354145,
+  "max_abs_dex": 0.460531951157183
+ },
+ "jitter_best_model": {
+  "median": 0.20097853839051938,
+  "min": 0.054870632475354085,
+  "max": 2.533028668017565
+ },
+ "chi2_red_lmfit_best_model": {
+  "median": 14.64557755031514,
+  "min": 1.8896928326301126,
+  "max": 270.7437111714308
+ },
+ "autocorr": {
+  "max": 1668.0813155323435,
+  "median": 46.93435545807453,
+  "n_fits_chain_shorter_than_50_tau": 14,
+  "n_fits": 105
+ }
+}

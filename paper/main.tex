@@ -3,7 +3,8 @@
 % Compile with mnras.cls (e.g. Overleaf "MNRAS template"):
 %   pdflatex main && bibtex main && pdflatex main && pdflatex main
 % Every number comes from results/ : h1_results.json, h1_robustness.csv, h1_hierarchical.txt,
-% h1_extra.json, method_check.md, outburst_table.csv, timescales_maxi.csv (see paper/notes.md).
+% h1_extra.json, method_check.md, outburst_table.csv, timescales_maxi.csv, amendment_1_checks.json,
+% decay_fits.csv, decay_fits_porb.json. The audit table in paper/notes.md lists each number and its file.
 
 \documentclass[fleqn,usenatbib]{mnras}
 \usepackage[T1]{fontenc}
@@ -109,7 +110,7 @@ For the test of H1 we use only systems whose orbital period was measured indepen
 
 \begin{table*}
 \centering
-\caption{Systems in the decay-time--period test, numbered by period as in Fig.~\ref{fig:taup}. $n$ is the number of bright outbursts, and $\langle\taud\rangle=10^{\langle\log\taud\rangle}$ over those outbursts. Origin: TW = this work (MAXI), YY = \citet{YanYu2015}, S = \citet{Saraswati2025}. For the five systems marked $^{a}$, the period is the value tabulated in the compilation named, where the original measurement is cited. $^{b}$Photometric period; mass from an H$\alpha$ line-width relation, not a full radial-velocity orbit.}
+\caption{Systems in the decay-time--period test, numbered by period as in Fig.~\ref{fig:taup}. $n$ is the number of bright outbursts, and $\langle\taud\rangle=10^{\langle\log\taud\rangle}$ over those outbursts. Origin: TW = this work (MAXI), YY = \citet{YanYu2015}, S = \citet{Saraswati2025}. For the five systems marked $^{a}$, the period is the value tabulated in the compilation named, where the original measurement is cited; we compared these with the abstracts of the original papers (see Section~\ref{sec:limits}). $^{b}$Photometric period; mass from an H$\alpha$ line-width relation, not a full radial-velocity orbit.}
 \label{tab:sample}
 \begin{tabular}{rlcllcccl}
 \toprule
@@ -398,6 +399,17 @@ The shape ratios of the 24 bright 2016--2026 outbursts range from 0.11 to 13, wi
 \label{fig:shapes}
 \end{figure*}
 
+\subsection{Model fits to the decays (exploratory)}
+\label{sec:fits}
+
+The two-point time uses three points of each decay. As a check that was not in the plan, we fitted the whole decay of each bright main outburst, from the peak to the end of its window, with three models: a single exponential; a linear decline to zero; and an exponential that changes to a linear decline at a free break time, as in the sequence of \citet{KingRitter1998}. We first fitted each model by least squares with \textsc{lmfit} \citep{Newville2014}. With the MAXI errors alone the reduced $\chi^2$ of the preferred model has a median of 15 (range 1.9--270), because real decays contain flares, dips and state transitions that no smooth model follows. We then sampled each model with \textsc{emcee}, adding a fractional scatter term to the variance of every point as a free parameter (median fitted value 0.20 of the model flux), and compared the models with the BIC.
+
+Of the 24 bright main outbursts of 2016--2026, the broken model is preferred for 17 (for 12 of them by more than 6 in BIC over the next model), the linear model for 4 (3) and the single exponential for 3 (1). Including the 11 earlier MAXI outbursts measured for the validation and the test, the numbers are 25 (19), 4 (3) and 6 (2) of 35. A single exponential is thus rarely an adequate description, in line with the shape ratios of Section~\ref{sec:shapes}. The broken model does not always behave as the theory expects, however: in several outbursts (for example 4U~1543$-$47 in 2021 and GX~339$-$4 in 2019--20) the fitted break separates a fast early drop from a slower later decline, so its exponential part does not measure the late, disc-wide decay.
+
+The e-folding time of the single-exponential fit agrees on average with the two-point time: for the 24 outbursts the median difference is 0.00\dex, with a robust scatter of 0.11\dex, a standard deviation of 0.14\dex\ and a largest difference of 0.46\dex. This scatter is similar to the method uncertainty that we assigned to literature values. Only the outbursts that we measured ourselves can be fitted, so the period test can be repeated only on the `this work only' subsample (8 systems, 13 outbursts). There the slope is $B=0.19$ ($-0.29$ to $0.69$) with two-point times, $0.16$ ($-0.40$ to $0.71$) with single-exponential times and $0.08$ ($-0.85$ to $0.91$) with the exponential part of the broken model. The fitted timescales therefore give no clearer dependence on period than the two-point times, but with eight systems they cannot exclude one either.
+
+These fits have limits. They describe the 2--10\,keV flux, not the accretion rate. The scatter term is a simple noise model. For 14 of the 105 fits (mostly broken models with two possible break times) the chains are shorter than 50 autocorrelation times, so their parameter ranges are approximate, and in a second run with shorter chains the preferred model changed for one outburst.
+
 %=====================================================================
 \section{Discussion}
 \label{sec:discussion}
@@ -436,7 +448,7 @@ This conclusion has limits. We have not reproduced the 2--12\,keV light curve th
 \item \textit{Mixed sample.} The 26 outbursts combine three sets of measurements (ours, and two from the literature) from two instruments and two energy bands, joined by a single method uncertainty of 0.19\dex\ that was estimated from only five to nine outbursts per comparison.
 \item \textit{Selection against failed outbursts.} The 0.1\,Crab limit is applied in soft X-rays, where hard-state outbursts are faint. The 2013, 2017--18 and 2022 outbursts of GX~339$-$4 peaked at 0.03--0.06\,Crab in MAXI (2--10\,keV) but at 0.10--0.18\,Crab in BAT (15--50\,keV, three-day medians). Failed outbursts, about a third of all outbursts \citep{Alabarta2021}, are therefore under-represented in our sample and in both earlier samples. Including the faint events did not change the result.
 \item \textit{Energy band and calibration.} Our 2--10\,keV band differs from the 2--12\,keV band of the literature, and the published MAXI-era peak fluxes differ from ours (Section~\ref{sec:compare}). The good agreement in $\taud$ with \citet{Saraswati2025} for most outbursts suggests that the effect on timescales is small, but a direct check with MAXI on-demand 2--12\,keV light curves remains to be done.
-\item \textit{Orbital periods.} For five literature systems we used the periods tabulated by \citet{YanYu2015} or \citet{Saraswati2025} rather than reading them from the original papers. The two candidates have periods from X-ray dips, and GRS~1716$-$249 has a photometric period. Using only radial-velocity orbits gives $B=0.12$ ($-0.21$ to $0.50$).
+\item \textit{Orbital periods.} For five literature systems we used the periods tabulated by \citet{YanYu2015} or \citet{Saraswati2025}. After the analysis we compared them with the abstracts of the original papers. Four agree. For XTE~J1650$-$500 the tabulated 7.63\,h is 0.8 per cent below the measured $0.3205\pm0.0007$\,d \citep{Orosz2004}, whose abstract gives both numbers; using 0.3205\,d gives $B=0.17$ ($-0.16$ to $0.51$). This comparison also shows the Monte Carlo precision of the interval limits, about 0.01. The period of 4U~1543$-$47 comes from a table \citep{Orosz2003} whose source is listed there as in preparation. The two candidates have periods from X-ray dips, and GRS~1716$-$249 has a photometric period. Using only radial-velocity orbits gives $B=0.12$ ($-0.21$ to $0.50$).
 \item \textit{Errors.} The Monte Carlo errors of two-point timescales are not always centred on the measured values (Section~\ref{sec:errors}), and the injection tests use single exponentials only.
 \item \textit{Luminosity.} We have not converted peak fluxes to Eddington ratios, which needs distances, masses and a bolometric correction. Whether $\taud$ depends on the peak Eddington ratio, and whether that dependence differs between short and long periods, is left to future work.
 \item \textit{Status of the analysis plan.} The plan was written before the test but was not pre-registered, and it was not frozen in a way that others can verify (Section~\ref{sec:stats}): the fingerprint is local, the test script and the period table were written after it, two clarifications were appended to it, the first-run output was not kept, and one confusion flag was added after the first results. The primary result is unchanged when the fingerprinted input files are restored and when the clarifications are undone, but the test should be read as a planned analysis with documented deviations, not as a registered one.
@@ -460,7 +472,7 @@ These conclusions rest on 13 systems and on an analysis plan that was written in
 %=====================================================================
 \section*{Acknowledgements}
 
-This research used MAXI data provided by RIKEN, JAXA and the MAXI team, and Swift/BAT transient monitor results provided by the Swift/BAT team. It made use of the BlackCAT catalogue and of NASA's Astrophysics Data System. The analysis used \textsc{numpy} \citep{Harris2020}, \textsc{scipy} \citep{Virtanen2020}, \textsc{pandas} \citep{McKinney2010}, \textsc{astropy} \citep{Astropy2022}, \textsc{emcee} \citep{ForemanMackey2013} and \textsc{matplotlib} \citep{Hunter2007}.
+This research used MAXI data provided by RIKEN, JAXA and the MAXI team, and Swift/BAT transient monitor results provided by the Swift/BAT team. It made use of the BlackCAT catalogue and of NASA's Astrophysics Data System. The analysis used \textsc{numpy} \citep{Harris2020}, \textsc{scipy} \citep{Virtanen2020}, \textsc{pandas} \citep{McKinney2010}, \textsc{astropy} \citep{Astropy2022}, \textsc{emcee} \citep{ForemanMackey2013}, \textsc{lmfit} \citep{Newville2014} and \textsc{matplotlib} \citep{Hunter2007}.
 
 \textit{Use of AI tools.} [AI-USE STATEMENT --- TBD] % Facts for the statement: an AI assistant (Claude, Anthropic) wrote the analysis code, ran the analysis, searched for and checked the references, reviewed the analysis, and drafted this manuscript; the researcher directed the project and edits the text. The final wording, and the description of who checked what, must be written by the author(s).
 
