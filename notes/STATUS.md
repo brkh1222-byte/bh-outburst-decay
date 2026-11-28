@@ -1,7 +1,16 @@
 # STATUS (kept current by the pilot agent)
 
-Last update: 2026-11-25, end of the pilot session. Branch: `research-plan` (from `main` at ba38f87; `main` already held the 22 Nov analysis as one commit, "progress", made by the researcher on 24 Nov).
+Last update: 2026-11-28 (session in progress). Branch: `research-plan` (from `main` at ba38f87; `main` already held the 22 Nov analysis as one commit, "progress", made by the researcher on 24 Nov).
 Policy: Claude runs the project and drafts the paper; the researcher edits later. Authorship and the AI-use statement are placeholders in paper/main.tex.
+
+## Where this project is (plain-language summary, 2026-11-28)
+
+**About 80% done.** The analysis is finished and the paper is a complete draft; what remains is checking, polishing and a few decisions only the researcher can make.
+
+- **Finished:** data download, outburst detection, timescale measurements, validation against two published samples, the main test (decay time vs orbital period: no significant trend, slope 0.17 with 95% range −0.17 to 0.52, 13 systems), robustness checks, decay-shape fits, light-curve figures, a literature search for competing papers (none found), a check of every reference and every number, an honest record of how the analysis plan was (and was not) frozen, and a full paper draft.
+- **In progress now (28 Nov session):** a referee-style critical read of the paper, a second pass over numbers and citations (does each cited paper really say what we claim?), extra robustness checks that need no new data, and making the draft as close to submission-ready as possible.
+- **Next:** compile the LaTeX (no TeX program on this Mac; Overleaf will do it), add a figure for the decay fits, final read by the researcher and mentor.
+- **Needs the researcher:** (1) authorship and AI-use statement; (2) whether to email Saraswati et al. about the GS 1354−64 event; (3) venue (MNRAS paper or short note); (4) a by-hand ADS citation search; (5) MAXI on-demand 2–12 keV light curves (manual web tool); (6) mentor input on the bolometric correction, which blocks the luminosity analyses (H3, H4).
 
 ## Main result (unchanged)
 H1: slope B = 0.17, 95% interval [−0.17, 0.52], 13 systems / 26 outbursts. H1 not supported. Power 0.84 for B = 0.5, 0.39 for B = 0.3.
