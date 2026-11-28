@@ -44,8 +44,13 @@ Our claim: this event is contamination from MAXI J1348−630, not an outburst of
 - I have not seen or reproduced Saraswati et al.'s own light curve. They used 2–12 keV (ASM-like)
   MAXI data; reproducing it needs the MAXI on-demand tool (task T2.4, manual). The factor ~4 in flux
   scale between their values and the standard product is itself unexplained.
-- I read their Table 2 from the PDF text only; I have not checked whether the text of their paper
-  discusses this event or flags it.
+- Update 2026-11-28: the full text of Saraswati et al. was read through a web fetch tool (publisher page; the tool summarises,
+  so quotes are short). Their Section 4.8 says "There were two outbursts detected in the MAXI/GSC light curves from this object"
+  and that only the first (MJD 57242) was covered by NuSTAR. MAXI J1348−630, contamination or confusion are not mentioned anywhere.
+  So they do treat the MJD 58524 event as an outburst of GS 1354−64. Their MAXI light curves are 2–12 keV from the MAXI
+  **on-demand** tool, not the standard archive product; an on-demand extraction region centred on GS 1354−64 may collect a different
+  share of the neighbour's flux than the standard product (I have not checked how either product treats nearby sources).
+  The factor ~4 between their fluxes and ours, for both the 2015 and the 2019 event, remains unexplained.
 - BAT (15–50 keV) could miss a purely soft outburst. Against that: GS 1354−64's known outbursts were
   hard, a 1.9 Crab soft state normally still has a detectable hard tail, and the timing coincidence
   to within a day would be needed as well.

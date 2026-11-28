@@ -69,7 +69,8 @@ King + Ritter + outburst; irradiated disc + outburst + decay), 4 OpenAlex full-t
 - arXiv searches cover titles and abstracts only. A decay–period test inside a paper body (as in
   Yan & Yu, where it is not in the abstract) would be missed.
 - Semantic Scholar keyword search failed (rate limit); only its citation lists worked.
-- The Saraswati et al. full text was read through a summarising tool, not directly; "no statistic
-  for decay vs period" should be confirmed against the PDF.
+- Saraswati et al. full text: read twice through a summarising fetch tool (25 and 28 Nov). Both reads agree: the only
+  statements are "it indeed increased with the orbital period" and "there was no decay time-scale saturation" (mean
+  t_d,10–90 = 43.63 d); no coefficient, p-value, fit or figure for decay time vs period. A direct look at the PDF is still advisable.
 - Not checked: conference proceedings, theses, citers of King & Ritter 1998, Chen, Shrader & Livio
   1997 and Shahbaz, Charles & King 1998.
